@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Online | ALVA DJAYA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>body { font-family: 'Poppins', sans-serif; } h1, h2, h3 { font-family: 'Playfair Display', serif; } .animate-up { animation: fadeInUp 0.6s ease-out forwards; opacity: 0; } @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }</style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="bg-white shadow-sm fixed w-full z-50 top-0 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <a href="index.html" class="flex items-center gap-3" aria-label="Kembali ke Beranda"><img src="IMAGES/LOGO-1.png" alt="Logo" class="h-11 w-auto object-contain"><div class="flex flex-col"><span class="text-lg font-extrabold text-blue-900 tracking-tight leading-none">ALVA DJAYA</span><span class="text-[10px] font-bold text-orange-600 tracking-widest uppercase">Tour & Rental</span></div></a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-500 hover:text-orange-600 font-medium transition">Beranda</a>
+                    <a href="tarif.html" class="text-gray-500 hover:text-orange-600 font-medium transition">Sewa Mobil</a>
+                    <a href="wisata.html" class="text-gray-500 hover:text-orange-600 font-medium transition">Paket Wisata</a>
+                    <a href="outing.html" class="text-gray-500 hover:text-orange-600 font-medium transition">Outing & Event</a>
+                    <a href="booking.html" class="bg-blue-900 hover:bg-blue-800 text-white px-6 py-2.5 rounded-full font-medium shadow-md transition flex items-center gap-2"><i class="fas fa-calendar-check"></i> Booking Online</a>
+                </div>
+                <div class="md:hidden flex items-center"><button id="mobile-menu-btn" aria-label="Buka Menu" class="text-blue-900 hover:text-orange-600 focus:outline-none p-2"><i class="fas fa-bars text-2xl"></i></button></div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-xl">
+            <div class="flex flex-col px-4 pt-2 pb-6 space-y-2">
+                <a href="index.html" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md">Beranda</a>
+                <a href="tarif.html" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md">Sewa Mobil</a>
+                <a href="wisata.html" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md">Paket Wisata</a>
+                <a href="outing.html" class="block px-3 py-3 text-base font-medium text-gray-600 hover:text-orange-600 hover:bg-gray-50 rounded-md">Outing & Event</a>
+                <a href="booking.html" class="block px-3 py-3 text-base font-bold text-white bg-blue-900 rounded-md text-center mt-4 shadow-md">Booking Online</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="relative h-[300px] flex items-center justify-center bg-blue-900 overflow-hidden">
+            <div class="absolute inset-0 opacity-30"><img src="IMAGES/Header-Wisata.jpg" alt="Latar Belakang" class="w-full h-full object-cover"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-slate-50 via-blue-900/90 to-blue-900/80"></div>
+            <div class="relative z-10 text-center px-4 mt-10"><h1 class="text-3xl md:text-5xl font-bold text-white mb-2 animate-up">Formulir Pemesanan</h1><p class="text-blue-100 text-sm md:text-base max-w-xl mx-auto animate-up delay-100">Isi data perjalanan Anda di bawah ini.</p></div>
+        </div>
+
+        <section class="max-w-6xl mx-auto px-4 -mt-16 relative z-20 pb-20">
+            <div class="flex flex-col lg:flex-row gap-8">
+                <div class="lg:w-2/3 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden animate-up delay-200">
+                    <div class="bg-orange-50 p-4 border-b border-orange-100 flex items-center gap-3"><div class="w-8 h-8 rounded-full bg-orange-500 text-white flex items-center justify-center font-bold text-sm">1</div><h3 class="font-bold text-slate-800">Data Pemesanan</h3></div>
+                    <form id="bookingForm" class="p-6 md:p-8 space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div><label for="nama" class="block text-xs font-bold text-gray-500 uppercase mb-2">Nama Lengkap</label><input type="text" id="nama" required class="w-full p-3 rounded-lg border border-gray-200 bg-slate-50" placeholder="Nama Anda"></div>
+                            <div><label for="whatsapp" class="block text-xs font-bold text-gray-500 uppercase mb-2">Nomor WhatsApp</label><input type="tel" id="whatsapp" required class="w-full p-3 rounded-lg border border-gray-200 bg-slate-50" placeholder="08123xxx"></div>
+                            <div class="md:col-span-2"><label for="layanan" class="block text-xs font-bold text-gray-500 uppercase mb-2">Pilih Layanan</label><select id="layanan" class="w-full p-3 rounded-lg border border-gray-200 bg-slate-50"><option value="Sewa Mobil">Sewa Mobil</option><option value="Paket Wisata">Paket Wisata</option><option value="Outing">Outing</option><option value="Drop Bandara">Drop Bandara</option></select></div>
+                            <div class="md:col-span-2"><label for="unit" class="block text-xs font-bold text-gray-500 uppercase mb-2">Unit Mobil / Paket</label><input type="text" id="unit" required class="w-full p-3 rounded-lg border border-gray-200 bg-slate-50" placeholder="Contoh: Innova Reborn"></div>
+                            <div><label for="tanggal" class="block text-xs font-bold text-gray-500 uppercase mb-2">Tanggal Mulai</label><input type="date" id="tanggal" required class="w-full p-3 rounded-lg border border-gray-200 bg-slate-50"></div>
+                            <div><label for="durasi" class="block text-xs font-bold text-gray-500 uppercase mb-2">Durasi (Hari)</label><input type="number" id="durasi" min="1" value="1" class="w-full p-3 rounded-lg border border-gray-200 bg-slate-50"></div>
+                            <div class="md:col-span-2"><label for="catatan" class="block text-xs font-bold text-gray-500 uppercase mb-2">Catatan</label><textarea id="catatan" rows="3" class="w-full p-3 rounded-lg border border-gray-200 bg-slate-50"></textarea></div>
+                        </div>
+                        <button type="button" onclick="kirimKeWA()" class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 rounded-xl shadow-lg transition">Kirim Pesanan Sekarang</button>
+                    </form>
+                </div>
+                <div class="lg:w-1/3 space-y-6 animate-up delay-200">
+                    <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6"><h4 class="font-bold text-blue-900 mb-4 text-lg">Kenapa Kami?</h4><ul class="space-y-4 text-sm text-gray-600"><li>✅ Konfirmasi Cepat</li><li>✅ Transaksi Aman</li><li>✅ Unit Terjamin</li></ul></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-white border-t border-gray-200 pt-12 pb-8"><div class="max-w-7xl mx-auto px-4 text-center"><div class="flex justify-center items-center gap-2 mb-4"><img src="IMAGES/LOGO-1.png" alt="Logo" class="h-9 w-auto object-contain"><span class="font-bold text-blue-900">ALVA DJAYA</span></div><p class="text-gray-500 text-sm">© 2023 ALVA DJAYA TOUR & HOLIDAY. All Rights Reserved.</p></div></footer>
+
+    <script>
+        const nomorWhatsApp = "6285724922172";
+        function kirimKeWA() {
+            var nama = document.getElementById("nama").value;
+            var wa = document.getElementById("whatsapp").value;
+            var layanan = document.getElementById("layanan").value;
+            var unit = document.getElementById("unit").value;
+            var tanggal = document.getElementById("tanggal").value;
+            var durasi = document.getElementById("durasi").value;
+            var catatan = document.getElementById("catatan").value;
+            if(nama === "" || wa === "" || unit === "" || tanggal === "") { alert("Mohon lengkapi data Nama, WA, Unit, dan Tanggal."); return; }
+            var pesan = `*FORMULIR BOOKING ONLINE*%0A%0A👤 Nama: ${nama}%0A📱 WA: ${wa}%0A📂 Layanan: ${layanan}%0A🚗 Unit: ${unit}%0A📅 Tanggal: ${tanggal}%0A⏱️ Durasi: ${durasi} Hari%0A📝 Catatan: ${catatan}`;
+            window.open(`https://wa.me/${nomorWhatsApp}?text=${pesan}`, '_blank');
+        }
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>
